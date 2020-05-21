@@ -13,7 +13,7 @@ A simple automation script that logs into your kra account and files your taxes 
   ```
   pip install selenium
   ```
-  
+
 - chrome or firefox drivers
 
   1. gekodriver for firefox: [download](https://github.com/mozilla/geckodriver/releases)
@@ -29,7 +29,10 @@ A simple automation script that logs into your kra account and files your taxes 
   ```
   pip install pytesseract
   ```
-  
+
+Or simply run:
+ ```pip install -r requirements.txt```
+
 ## Demo
 
 ![demo](https://user-images.githubusercontent.com/39020723/81918498-32c15c80-95df-11ea-8a7a-f7eeda5beb14.gif)
