@@ -1,0 +1,3 @@
+selenium
+opencv-python
+pytesseract
