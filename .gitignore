@@ -1,2 +1,4 @@
 easytax\secrets.py
 easytax/__pycache__/
+.idea
+taxenv
