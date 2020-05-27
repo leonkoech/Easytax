@@ -1,3 +1,6 @@
-selenium
-opencv-python
-pytesseract
+numpy==1.18.4
+opencv-python==4.2.0.34
+Pillow==7.1.2
+pytesseract==0.3.4
+selenium==3.141.0
+urllib3==1.25.9
