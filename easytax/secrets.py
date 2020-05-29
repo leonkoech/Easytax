@@ -1,5 +1,4 @@
 
+pin = "A012082711V"
 
-pin='your pin'
-
-password='your password'
+password = "W1ll1@m1107"
