@@ -1,4 +1,4 @@
 
-pin = "A012082711V"
+pin = "your kra pin"
 
-password = "W1ll1@m1107"
+password = "your password"
