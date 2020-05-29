@@ -6,6 +6,8 @@
 ![build: passing](https://img.shields.io/badge/build-passing-brightgreen)
 
 A simple automation script that logs into your kra account and files your taxes with one command
+Currently works for Chrome users. Will create Firefox version soon
+
 
 ## Requirements
 
@@ -18,6 +20,8 @@ A simple automation script that logs into your kra account and files your taxes 
 
   1. gekodriver for firefox: [download](https://github.com/mozilla/geckodriver/releases)
   2. webdriver for chrome: [download](https://chromedriver.chromium.org/downloads)
+  3. For Chrome users, download the webdriver specific to your browser. If you are on Chrome 81, get the webdriver for chrome 81.
+  4. To verify your Chrome version, go to terminal and run `chrome --version` on Windows command prompt or `chromium --version` if you run Linux
 
 - computer vision
 
@@ -28,19 +32,14 @@ A simple automation script that logs into your kra account and files your taxes 
 
   ```
   pip install pytesseract
+  pip install tesseract
   ```
 
 Or simply run:
  ```pip install -r requirements.txt```
 
-## Demo
-
-![demo](https://user-images.githubusercontent.com/39020723/81918498-32c15c80-95df-11ea-8a7a-f7eeda5beb14.gif)
 
 ## License
 
 This project is under the [mit](#) license
 
-## Contribution
-
-Please read the [contribution guide](#) before contributing.
