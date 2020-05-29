@@ -33,14 +33,7 @@ A simple automation script that logs into your kra account and files your taxes 
 Or simply run:
  ```pip install -r requirements.txt```
 
-## Demo
-
-![demo](https://user-images.githubusercontent.com/39020723/81918498-32c15c80-95df-11ea-8a7a-f7eeda5beb14.gif)
-
 ## License
 
 This project is under the [mit](#) license
 
-## Contribution
-
-Please read the [contribution guide](#) before contributing.
