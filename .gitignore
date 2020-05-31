@@ -1,3 +1,4 @@
 easytax/__pycache__/
 .idea
 taxenv
+geckodriver.log
