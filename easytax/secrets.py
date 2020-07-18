@@ -1,5 +1,4 @@
 
+pin = "your kra pin"
 
-pin='your pin'
-
-password='your password'
+password = "your password"

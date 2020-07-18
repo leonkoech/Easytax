@@ -1,4 +1,10 @@
 from selenium import webdriver
+# Ignore for now
+# Still under development
+
+
+from selenium.common.desired_capabilities import DesiredCabapilities
+from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import cv2
@@ -6,16 +12,10 @@ import pytesseract
 import secrets
 
 
-def openkra():
-    options = webdriver.ChromeOptions()
-    options.add_argument('--ignore-certificate-errors')
-    options.add_argument("--test-type")
-    options.add_argument("disable-infobars")
-    options.add_argument("--disable-extensions")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--no-sandbox")
-
-    driver = webdriver.Chrome(options=options, executable_path='/usr/local/bin/chromedriver')
+def open_itax():
+    cap = DesiredCapabilities().FIREFOX
+    cap["marionette"] = False
+    driver = webdriver.Firefox(capabilities=cap)
     driver.get('https://itax.kra.go.ke/')
     time.sleep(3)  # sleep for 3 seconds after page has loaded
     inputpin = driver.find_element_by_xpath('//*[@id="logid"]')
@@ -76,5 +76,4 @@ def readimage():
             return ans
 
 
-if __name__ == '__main__':
-    openkra()
+
