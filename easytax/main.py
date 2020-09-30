@@ -1,3 +1,9 @@
+'''
+This is Automated for Chrome Users.. 
+NOTE: Ids and Classes may be Changed in Future While Upgrading the Site..
+Change Those Ids and Classess if any of them are Changed.. 
+'''
+
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 import time
@@ -15,9 +21,11 @@ def openkra():
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--no-sandbox")
 
+    # Getting the Url Fired..
     driver = webdriver.Chrome(options=options, executable_path='/usr/local/bin/chromedriver')
     driver.get('https://itax.kra.go.ke/')
     time.sleep(3)  # sleep for 3 seconds after page has loaded
+    # Signing In to Your Account.. Do add your PINS and PASSWORDS in Secrets.py inorder to make the Code Work..
     inputpin = driver.find_element_by_xpath('//*[@id="logid"]')
     inputpin.send_keys(secrets.pin)
     time.sleep(3)  # sleep for 10 seconds to see input
@@ -51,14 +59,15 @@ def openkra():
     driver.find_element_by_xpath('//*[@id="btnSubmit"]')
     time.sleep(10)
 
+    # Closing the Driver after Completion of TASK 
     driver.quit()
 
-
+# Function to Read and Write the Images
 def downloadimage(driver, link):
     with open('filename.png', 'wb') as file:
         file.write(driver.find_element_by_xpath(link).screenshot_as_png)
 
-
+# Reading the Images Using OpenCV Module and Converting the Text in the Image into a string Using Pytesseract Module .. 
 def readimage():
     img = cv2.imread('filename.png')
     text = pytesseract.image_to_string(img)
@@ -75,6 +84,6 @@ def readimage():
             ans = int(text[0]) - int(text[1])
             return ans
 
-
+# Running the Program If it is the Main Script ... 
 if __name__ == '__main__':
     openkra()
